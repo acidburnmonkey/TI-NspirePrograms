@@ -1,0 +1,24 @@
+Define LibPub gammapdf()=
+Prgm
+©Gamma pdf
+©by github.com acidburnmonkey
+©α=((μ^(2))/(σ^(2)))
+©β= ((μ)/(σ^(2)))
+Request "x:",x
+Request "α:",a
+Request "β (1/θ)",b
+If a≤0 Then
+  Disp "Error:α must be > 0"
+  Return
+EndIf
+If b≤0 Then
+  Disp "Error:  β must be > 0"
+  Return
+EndIf
+r:=((b^(a)*x^(a-1)*e^(−b*x))/((a-1)!))
+ex:=((a)/(b))
+var:=((a)/(b^(2)))
+Disp "E(x)",ex
+Disp "V(x)",var
+Disp "Ans: ",r
+EndPrgm
