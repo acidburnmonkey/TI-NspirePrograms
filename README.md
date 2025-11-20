@@ -3,6 +3,7 @@
 ## Programs
 
 - Gamma distribution Pdf (β as rate).
+- Gamma distribution Cdf (β as rate).
 
 
 ## Install and run
