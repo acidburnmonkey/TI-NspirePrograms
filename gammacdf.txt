@@ -1,0 +1,22 @@
+Define LibPub gammacdf()=
+Prgm
+©Gamma CDF
+©by github.com acidburnmonkey
+©α=((μ^(2))/(σ^(2)))
+©β= ((μ)/(σ^(2)))
+
+Request "α",a
+Request "β (1/θ)",b
+Request "x",x
+
+If a<0 or b<0 Then
+Disp "Error: α, β must be >0"
+Stop
+EndIf
+g:=(a-1)!
+y1:=((b^(a)*x^(a-1)*^(−b*x))/(g))
+cdf:=∫(y1,x,0,x)
+
+Disp "CDF:",cdf▶Decimal
+Return cdf
+EndPrgm
